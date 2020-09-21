@@ -1,0 +1,4 @@
+api:
+  sendreport:
+    uri: www.repor.com.br
+  version: 2.0

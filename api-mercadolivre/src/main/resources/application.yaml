@@ -1,0 +1,68 @@
+server:
+ port: 8080
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.security.oauth: DEBUG
+    org.springframework.security.oauth.boot: DEBUG
+    
+# Local Elasticsearch config
+spring:
+ jackson:
+  deserialization:
+   USE_BIG_DECIMAL_FOR_FLOATS: true
+ mail:
+  host: smtp.gmail.com
+  port: 465
+  username: revendascerta@gmail.com
+  password: edu5521d
+  properties:
+   mail:
+    smtp:
+     auth: true
+     port: 465
+     host: smtp.gmail.com
+     connectiontimeout: 5000
+     timeout: 5000
+     writetimeout: 5000
+     ssl: 
+      enable: true
+     starttls:
+      required: true
+      enable: true
+     socketFactory:
+      port: 465
+      fallback: false
+      class: javax.net.ssl.SSLSocketFactory
+
+ application:
+  name: Mercado Livre APi
+ #elasticsearch:
+  #rest:
+   #uris: http://localhost:9200
+ data:
+   elasticsearch:
+    repositories:
+     enabled: true
+webdriver:
+  windows:
+   firefox: webdriver\\windows\\geckodriver.exe
+  linux:
+   firefox: webdriver\\linux\\geckodriver
+api:
+  sendreport:
+    uri: www.repor.com.br
+  version: 2.0
+  
+elastich:
+ rest:
+  uris: localhost
+  port: 9200
+  username: admin
+  password: admin
+  
+ date:
+  format:
+   br-sp: uuuu-MM-dd'T'HH:mm:ss+0300 
