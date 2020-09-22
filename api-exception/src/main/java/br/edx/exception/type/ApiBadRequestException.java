@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import br.edx.exception.config.ApiMessageSource;
 import br.edx.exception.config.msg.ApiErrorCode;
 
-
-@ResponseStatus(HttpStatus.BAD_REQUEST)
+@ResponseStatus(code = HttpStatus.BAD_REQUEST)
 public class ApiBadRequestException extends RuntimeException implements ApiErrorCode {
 	private static final long serialVersionUID = 992428721490241972L;
+
 	private static final Logger log = LoggerFactory.getLogger(ApiBadRequestException.class);
 
 	private String errorCode;

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import br.edx.exception.config.ApiMessageSource;
 import br.edx.exception.config.msg.ApiErrorCode;
 
-@ResponseStatus(HttpStatus.NOT_FOUND)
+@ResponseStatus(code = HttpStatus.NOT_FOUND)
 public class ApiNotFoundException  extends RuntimeException implements ApiErrorCode {
 	private static final long serialVersionUID = -6588825267056042318L;
 	private static final Logger log = LoggerFactory.getLogger(ApiNotFoundException.class);

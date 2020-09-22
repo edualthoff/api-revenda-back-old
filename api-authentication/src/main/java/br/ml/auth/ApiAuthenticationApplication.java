@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 
-@SpringBootApplication()
+@SpringBootApplication(scanBasePackages = {"br.ml.auth.*"})
 //@EnableJpaAuditing(auditorAwareRef = "auditorAware")
 @ComponentScan({  "br.ml.auth.*", "br.edx.exception.*" })
 public class ApiAuthenticationApplication {
