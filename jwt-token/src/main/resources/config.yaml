@@ -1,0 +1,11 @@
+api:
+  sendreport:
+    uri: www.repor.com.br
+  version: 2.0
+
+security:
+ jwt:
+  public-key: classpath:keystorepublic.txt
+ oauth2:
+  resource:
+   id: d77b5afc-4531-416d-a296-fb8550ea2f0f # Id / Nome do servidor de recurso
