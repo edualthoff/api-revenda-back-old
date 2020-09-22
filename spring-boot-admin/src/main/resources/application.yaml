@@ -1,0 +1,48 @@
+
+server:
+ port: 8089
+ 
+ #Customize UI
+spring:
+ boot:
+  admin:
+   ui:
+    title: Revenda Certa
+    brand: Admin Panel
+ #SBA Mail Configuration
+   notify:
+    mail:
+     enabled: true
+     from: log@revendacerta.com.br
+     to: log@revendacerta.com.br
+# Securtiy Admin
+ security:
+  user:
+   name: admin
+   password: admin
+   
+# Email Config
+ mail:
+  host: smtp.gmail.com
+  port: 465
+  username: log@revendacerta.com.br
+  password: edu5521d
+  properties:
+   mail:
+    smtp:
+     auth: true
+     port: 465
+     host: smtp.gmail.com
+     connectiontimeout: 5000
+     timeout: 5000
+     writetimeout: 5000
+     ssl: 
+      enable: true
+     starttls:
+      required: true
+      enable: true
+     socketFactory:
+      port: 465
+      fallback: false
+      class: javax.net.ssl.SSLSocketFactory
+    
