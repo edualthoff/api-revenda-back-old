@@ -1,0 +1,39 @@
+server:
+ port: 8080
+
+   
+## Banco de Dados App - Postgresql
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring:
+ application:
+    name: api-revenda
+ jpa.open-in-view: false
+ resources:
+  add-mappings: false
+ jpa:
+  # Show or not log for each sql query
+  show-sql: true
+  open-in-view: false
+  properties:
+   # Hibernate Properties
+   hibernate:
+    dialect: org.hibernate.dialect.PostgreSQLDialect
+    # Hibernate ddl auto (create, create-drop, validate, update)
+    ddl-auto: update
+    show_sql: true
+    format_sql: true
+# Banco de dados APP
+ datasource:
+  url: jdbc:postgresql://localhost:5432/db_principal?currentSchema=public&useSSL=false
+  username: postgres
+  password: admin
+  driverClassName: org.postgresql.Driver
+  initialization-mode: always
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.security.oauth: DEBUG
+    org.springframework.security.oauth.boot: DEBUG
+  
